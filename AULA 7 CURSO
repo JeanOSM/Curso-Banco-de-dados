@@ -3,26 +3,30 @@
 
 
 
-
+--INSERT
 5. Escreva o comando para inserir 3 registros da tabela estado com todas as colunas.
-
 INSERT INTO estado (id,nome,sigla,ativo,data_cadastro) VALUES (DEFAULT, 'PARANÁ', 'PR','S', '2022-09-03');
 INSERT INTO estado (id,nome,sigla,ativo,data_cadastro) VALUES (DEFAULT, 'RIO DE JANEIRO', 'RJ','S', '2022-09-03');
 INSERT INTO estado (id,nome,sigla,ativo,data_cadastro) VALUES (DEFAULT, 'MATO GROSSO', 'MT','S', '2022-09-03');
 
 6. Escreva o comando para inserir 2 registros da tabela estado, definindo todos os dados, exceto a chave  primária que é auto incremento. 
  INSERT INTO estado  VALUES ('RIO DE JANEIRO', 'RJ','S', '2022-09-03');
+ 
 7. Escreva o comando para inserir 2 registros da tabela estado, definindo somente os dados necessários. 
 INSERT INTO estado ( nome, sigla) VALUES ( 'PARANÁ','PR');
-INSERT INTO estado(nome, sigla) VALUES('MATO GROSSO','MT');
+INSERT INTO estado(nome, sigla) VALUES('MATO GROSSO','MT');   
 
+-- DELETE E UPDATE
+9. Escreva o comando para alterar o valor de uma coluna de um único registro de uma tabela usando como filtro ou chave primária.
+UPDATE estado SET sigla = 'SP' WHERE id = 2;
 
+13.	Escreva todos os comandos necessários para excluir o cliente com o id “38”.
+DELETE FROM cliente WHERE id = 38;
 
-
-
-
-
-
-
+--SELECT
+6. Escreva o comando para selecionar todos os registros da tabela com todas as colunas.
+SELECT id,nome,ativo,data_cadastro FROM cidade;
+7. Escreva o comando para selecionar o nome de todos os registros da tabela cidade.
+SELECT cidade.nome FROM cidade;
 
 
