@@ -33,7 +33,11 @@ DROP DATABASE IF EXISTS aula_banco;
  ,CONSTRAINT cidade_unica UNIQUE (nome_cidade,estado_id)
  
  );
+  
+ INSERT INTO cidade (nome_cidade,estado_id) VALUES ('CURIIBA', 1);
  
+ SELECT * FROM cidade ;
+
   -- aula aueraçâo na tabela
  
  ALTER TABLE estado ADD COLUMN regiao INT;
@@ -68,7 +72,3 @@ DROP DATABASE IF EXISTS aula_banco;
  COMANDOS QUE MANIPULAM OS DADOS 
  INSERT/UPDATE/DELECT/SELECT
  **/
- 
- INSERT INTO cidade (nome_cidade,estado_id) VALUES ('CURIIBA', 1);
- 
- SELECT * FROM cidade ;
