@@ -1,0 +1,11 @@
+01 - Liste o id e o nome de todas as cidades e como siglas do estado.
+SELECT cidade.id, cidade.nome, estado.sigla FROM cidade INNER JOIN estado;
+
+02 - Em relação ao resultado do exercício anterior, observe que os nomes das não estão claros. Refaça o comando para que torne mais claras.
+SELECT cidade.id, cidade.nome, estado.sigla FROM cidade INNER JOIN estado ON cidade.estado_id = estado.id;
+
+07 - Liste o id e o nome de todas as cidades e como siglas do estado de São Paulo.
+SELECT cidade.id, cidade.nome, estado.sigla FROM cidade INNER JOIN estado ON cidade.estado_id = estado.id WHERE estado.id = 18;
+
+10 - Escreva uma consulta que liste o nome e o telefone dos Fornecedores da cidade de São Paulo.
+SELECT fornecedor.nome, fornecedor.fone FROM fornecedor JOIN cidade ON fornecedor.cidade_id = cidade.id WHERE cidade.nome = 'SAO PAULO';
